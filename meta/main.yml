@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: ansible-auditbeat
+  role_name: auditbeat
   author: Sami Yessou
   description: Playbook for auditbeat.
   company: Enter srl
