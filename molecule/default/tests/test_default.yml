@@ -1,0 +1,24 @@
+---
+package:
+  auditbeat:
+    installed: true
+port:
+  tcp:80:
+    listening: true
+    ip:
+      - 0.0.0.0
+service:
+  auditbeat:
+    enabled: true
+    running: true
+user:
+  auditbeat:
+    exists: true
+    groups:
+      - auditbeat
+group:
+  auditbeat:
+    exists: true
+process:
+  auditbeat:
+    running: true
