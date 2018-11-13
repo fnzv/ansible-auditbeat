@@ -11,7 +11,5 @@ auditbeat.modules:
   - /etc
 setup.template.settings:
   index.number_of_shards: 3
-setup.kibana:
-  host: "{{ elasticsearch_host }}:5601"
 output.elasticsearch:
-  hosts: ["{{ elasticsearch_host }}:9200"]
+  hosts: ["{{ elasticsearch_host }}"]
