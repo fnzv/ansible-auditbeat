@@ -1,0 +1,17 @@
+auditbeat.modules:
+- module: auditd
+  audit_rule_files: [ '${path.config}/audit.rules.d/*.conf' ]
+  audit_rules: |
+- module: file_integrity
+  paths:
+  - /bin
+  - /usr/bin
+  - /sbin
+  - /usr/sbin
+  - /etc
+setup.template.settings:
+  index.number_of_shards: 3
+setup.kibana:
+  host: "{{ elasticsearch_host }}:5601"
+output.elasticsearch:
+  hosts: ["{{ elasticsearch_host }}:9200"]

@@ -1,2 +1,18 @@
 ---
 # tasks
+- include: setup-Debian.yml
+  when: ansible_os_family == 'Debian'
+
+- name: Install Auditbeat.
+  package: name=auditbeat state=present
+
+- include: config.yml
+
+- name: Remove 32bit unwanted configuration
+  shell: rm /etc/auditbeat/audit.rules.d/sample-rules-linux-32bit.conf
+
+- name: Ensure Auditbeat is started and enabled at boot.
+  service:
+    name: auditbeat
+    state: started
+    enabled: true

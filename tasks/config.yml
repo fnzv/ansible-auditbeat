@@ -1,0 +1,8 @@
+---
+- name: Copy Auditbeat configuration.
+  template:
+    src: auditbeat.yml.j2
+    dest: "/etc/auditbeat/auditbeat.yml"
+    owner: root
+    group: root
+    mode: 0644

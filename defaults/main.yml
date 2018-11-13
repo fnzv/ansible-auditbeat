@@ -1,2 +1,4 @@
 ---
 # defaults vars
+
+elasticsearch_host: "127.1.3.4"

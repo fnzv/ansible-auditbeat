@@ -23,4 +23,3 @@
         - git
   roles:
     - role: ansible-auditbeat
-    
