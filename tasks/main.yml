@@ -3,7 +3,10 @@
 - include: setup-Debian.yml
   when: ansible_os_family == 'Debian'
 
-- name: Install Auditbeat.
+- name: Install Auditd
+  package: name=auditd state=present
+
+- name: Install Auditbeat
   package: name=auditbeat state=present
 
 - include: config.yml
@@ -18,4 +21,3 @@
     name: auditbeat
     state: started
     enabled: true
-
