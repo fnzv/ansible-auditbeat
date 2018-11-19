@@ -4,7 +4,7 @@ Ansible Role: auditbeat
 [![Build Status](https://travis-ci.org/entercloudsuite/ansible-auditbeat.svg?branch=master)](https://travis-ci.org/entercloudsuite/ansible-auditbeat)
 [![Galaxy](https://img.shields.io/badge/galaxy-entercloudsuite.auditbeat-blue.svg?style=flat-square)](https://galaxy.ansible.com/entercloudsuite/auditbeat)  
 
-Installs auditbeat on Ubuntu 16.04 (Xenial)
+Installs auditbeat on Ubuntu 16.04 (Xenial) 
 
 ## Requirements
 
